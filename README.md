@@ -81,7 +81,6 @@ module Events
 
     on SubscriptionCancelled, notify: [CancelSubscription, SendCancellationEmail]
     # on Event1, Event2, notify: Notifier
-
   end
 end
 ```
@@ -98,6 +97,11 @@ It's a good idea to have a module to contain your events and dispatcher for each
 First, it means you can see all the events and notifiers for each part of your domain.
 Secondly, it should avoid having autoload difficulties.
 I haven't run into any yet, but in the above example if `EventDispatcher.raise` was called before the interpreter knew about `Events::Dispatcher` the notifiers would not be called.
+
+## To Do
+
+* [ ] come up with a good pattern for processing some or all notifications in the background; this will likely be a responsibility of the notifier itself, but it would be useful to provide an example.
+* [ ] organise and improve tests; there are some, but they could do with being organised more logically
 
 ## Development
 

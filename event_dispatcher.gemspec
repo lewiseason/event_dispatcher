@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Lewis Eason"]
   spec.email         = ["me@lewiseason.co.uk"]
 
-  spec.summary       = "Write a short summary, because RubyGems requires one." # TODO: Write this.
+  spec.summary       = "Library to help reduce coupling parts of an application by dispatching domain events."
   spec.license       = "MIT"
 
   spec.files         = Dir["lib/**/*.rb"]
